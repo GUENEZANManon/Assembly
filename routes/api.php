@@ -18,11 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('test', function(Request $request){
+Route::get('/test', function(Request $request){
     return ([ 'Value' => 'test']);
 })
 ;
 
-Route::get('software', 'SoftwareController@index');
+Route::get('/software/{id}', 'SoftwareController@find');
+
+Route::get('/software', 'SoftwareController@all');
 
 

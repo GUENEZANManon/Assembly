@@ -12,9 +12,13 @@ class SoftwareController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function all()
     {
         return Software::all();
+    }
+    public function find(int $id)
+    {
+        return Software::find($id);
     }
 
     /**
