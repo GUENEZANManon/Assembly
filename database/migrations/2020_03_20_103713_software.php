@@ -18,6 +18,7 @@ class Software extends Migration
             $table->string("name");
             $table->string("description");
             $table->decimal("version");
+            $table->string("type");
             $table->dateTime("dateStart");
             $table->dateTime("dateFinish");
             $table->decimal("cost");

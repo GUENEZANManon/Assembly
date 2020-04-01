@@ -18,7 +18,7 @@ class SoftwareController extends Controller
     }
     public function find(int $id)
     {
-        return Software::find($id);
+        return Software::where('id',$id)->get();
     }
 
     /**
